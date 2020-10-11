@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {% block head %}
+<title>Job Application Tracker</title>
+{% endblock %} {% block body %}
+<div class="content">
+    <div class="header">
+        <h1>Job Application Tracker</h1>
+    </div>
+    <div class="sub-header">
+        <h3>Update the Interview Date</h3>
+    </div>
+    <br />
+    <div class="form">
+        <form action="/update/{{job.id}}" method="POST">
+            <label for="interview_date">Interview Date</label><br />
+            <input type="text" name="interview_date" id="interview_date" value="{{job.interview_date}}"/><br />
+            <br />
+            <input type="submit" value="Update Interview Date" />
+        </form>
+    </div>
+</div>
+{% endblock %}

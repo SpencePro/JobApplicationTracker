@@ -1,0 +1,48 @@
+html {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+}
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background: rgb(226, 226, 226);
+}
+.head-content {
+    width: 100%;
+    background: grey;
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+h1 {
+    margin-top: 0;
+}
+table,
+th,
+td {
+    border: 0.5px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+td {
+    width: 100px;
+}
+th {
+    background: grey;
+}
+.content {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+label {
+    font-weight: bold;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    color: blue;
+}

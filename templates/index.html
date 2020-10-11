@@ -1,0 +1,50 @@
+{% extends 'base.html' %} {% block head %}
+<title>Job Application Tracker</title>
+{% endblock %} {% block body %}
+<div class="content">
+  <div class="head-content">
+    <div class="header">
+      <h1>Job Application Tracker</h1>
+    </div>
+    <div class="sub-header">
+      <h3>Track jobs you have applied for</h3>
+    </div>
+  </div>
+  <br />
+  <div class="form">
+    <form action="/" method="POST">
+      <label for="company">Company</label><br />
+      <input type="text" name="company" id="company" /><br />
+      <label for="position">Position</label><br />
+      <input type="text" name="position" id="position" /><br />
+      <label for="interview_date">Interview Date</label><br />
+      <input type="text" name="interview_date" id="interview_date" /><br />
+      <br />
+      <input type="submit" value="Add Entry" />
+    </form>
+  </div>
+  <br />
+  <table>
+    <tr>
+      <th>Company</th>
+      <th>Position</th>
+      <th>Date Added</th>
+      <th>Interview Date</th>
+      <th>Actions</th>
+    </tr>
+    {% for job in jobs %}
+    <tr>
+      <td>{{ job.company }}</td>
+      <td>{{ job.position }}</td>
+      <td>{{ job.date_added }}</td>
+      <td>{{ job.interview_date }}</td>
+      <td>
+        <a href="/delete/{{job.id}}">Delete</a>
+        |
+        <a href="/update/{{job.id}}">Update</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}
